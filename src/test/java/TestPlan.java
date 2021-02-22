@@ -54,43 +54,43 @@ public class TestPlan {
         Thread.sleep(5000);
         System.out.println("Yes");
         Assert.assertTrue(home.HomePageLogo());
-//        Assert.assertTrue(home.HeaderMovies());
-//        Assert.assertTrue(home.HeaderTelevision());
-//        Assert.assertTrue(home.HeaderMylist());
-//        Assert.assertTrue(home.HeaderLogoutButton());
-//        Thread.sleep(12000);
-////        home.MovieListViewDetailButton();
+        Assert.assertTrue(home.HeaderMovies());
+        Assert.assertTrue(home.HeaderTelevision());
+        Assert.assertTrue(home.HeaderMylist());
+        Assert.assertTrue(home.HeaderLogoutButton());
+        Thread.sleep(12000);
+//        home.MovieListViewDetailButton();
     }
 
-//    @Test(priority = 4, testName = "4) Verify functionality of View Details button")
-//    @Description("Verify the Title is underlined(highlighted) when carousel moves to that slider")
-//    public static void test_FunctionalityViewDetailButton() throws InterruptedException {
-//        Home home = new Home(driver);
-//        System.out.println("2nd one");
-//        home.accept_cookies();
-//        Thread.sleep(5000);
-//        String title = home.MovieListViewDetailButton();
-//        Assert.assertEquals(title, "ROAR | Home");
-//        Assert.assertTrue(home.VerifySynopsisTitle());
-//        Assert.assertTrue(home.ClickLogo());
-//        Assert.assertTrue(home.SliderTitleHighlighted());
-//        Assert.assertTrue(home.VerifyScroll());
-//    }
-//
-//
-//    @Test(priority=5, testName = "5) Verify maximum 4 titles are shown on the Progress Bar")
-//    @Description("Verify Movie links are clickable and redirects to correct page")
-//    public static void test_MenuLinksClickable() throws InterruptedException {
-//        Home home = new Home(driver);
-//        home.refeshpage();
-//        Assert.assertEquals(home.Maximum4Titles(),4);
-//        Assert.assertTrue(home.ClickMovies());
-//        home.ClickLogo();
-//        Assert.assertTrue(home.ClickTelevision());
-//        home.ClickLogo();
-//        Assert.assertTrue(home.ClickLists());
-//        home.ClickLogo();
-//    }
+    @Test(priority = 4, testName = "4) Verify functionality of View Details button")
+    @Description("Verify the Title is underlined(highlighted) when carousel moves to that slider")
+    public static void test_FunctionalityViewDetailButton() throws InterruptedException {
+        Home home = new Home(driver);
+        System.out.println("2nd one");
+        home.accept_cookies();
+        Thread.sleep(5000);
+        String title = home.MovieListViewDetailButton();
+        Assert.assertEquals(title, "ROAR | Home");
+        Assert.assertTrue(home.VerifySynopsisTitle());
+        Assert.assertTrue(home.ClickLogo());
+        Assert.assertTrue(home.SliderTitleHighlighted());
+        Assert.assertTrue(home.VerifyScroll());
+    }
+
+
+    @Test(priority=5, testName = "5) Verify maximum 4 titles are shown on the Progress Bar")
+    @Description("Verify Movie links are clickable and redirects to correct page")
+    public static void test_MenuLinksClickable() throws InterruptedException {
+        Home home = new Home(driver);
+        home.refeshpage();
+        Assert.assertEquals(home.Maximum4Titles(),4);
+        Assert.assertTrue(home.ClickMovies());
+        home.ClickLogo();
+        Assert.assertTrue(home.ClickTelevision());
+        home.ClickLogo();
+        Assert.assertTrue(home.ClickLists());
+        home.ClickLogo();
+    }
 
     @Test(priority=6, testName = "6) Verify on click of Logout button, user is successfully logged out")
     @Description("Verify Element Present in homepage")
